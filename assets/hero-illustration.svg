@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 640" fill="none" role="img" aria-labelledby="heroIllTitle">
+  <title id="heroIllTitle">TaskFlow Desktop Workspace on laptop screen alongside Smartphone mobile app view</title>
+
+  <defs>
+    <linearGradient id="blobGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8f7ed"/>
+      <stop offset="1" stop-color="#f4fbf6"/>
+    </linearGradient>
+    <linearGradient id="laptopGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#182e22"/>
+      <stop offset="1" stop-color="#0e1d15"/>
+    </linearGradient>
+    <linearGradient id="phoneGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c2b21"/>
+      <stop offset="1" stop-color="#0a140e"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f8faf9"/>
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#16a34a"/>
+      <stop offset="1" stop-color="#4ade80"/>
+    </linearGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#0f3d24" flood-opacity="0.16"/>
+    </filter>
+    <filter id="cardShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0f3d24" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient light green background glow -->
+  <ellipse cx="460" cy="300" rx="380" ry="260" fill="url(#blobGrad)"/>
+
+  <!-- ===== LAPTOP MOCKUP ===== -->
+  <g filter="url(#softShadow)">
+    <!-- Base stand -->
+    <path d="M230 490 L810 490 L840 520 L200 520 Z" fill="#0d1b13"/>
+    <rect x="230" y="485" width="580" height="10" rx="4" fill="#183224"/>
+
+    <!-- Screen frame -->
+    <rect x="260" y="110" width="520" height="380" rx="16" fill="url(#laptopGrad)"/>
+    <rect x="280" y="130" width="480" height="340" rx="8" fill="url(#screenGrad)"/>
+
+    <!-- Laptop Top Bar -->
+    <rect x="280" y="130" width="480" height="36" rx="8" fill="#ffffff" stroke="#e2ede6"/>
+    
+    <!-- Official TaskFlow Logo in top bar -->
+    <g transform="translate(288, 137)">
+      <image href="logo-mark.png" width="22" height="22"/>
+    </g>
+
+    <text x="316" y="148" font-family="Sora, sans-serif" font-size="9" font-weight="800" fill="#0f1a14">TASKFLOW</text>
+    <text x="316" y="157" font-family="Inter, sans-serif" font-size="5.5" font-weight="700" fill="#16a34a">LOCAL &amp; OFFLINE</text>
+
+    <!-- Date pill -->
+    <rect x="382" y="138" width="92" height="20" rx="10" fill="#f4f9f6" stroke="#e2ede6"/>
+    <text x="388" y="151" font-family="Inter, sans-serif" font-size="7" fill="#4a5568">📅 Fri, 14 Aug • 09:11 PM</text>
+
+    <!-- Global Search -->
+    <rect x="480" y="138" width="126" height="20" rx="6" fill="#ffffff" stroke="#e2ede6"/>
+    <text x="488" y="151" font-family="Inter, sans-serif" font-size="7" fill="#718096">🔍 Search globally...   CTRL+K</text>
+
+    <!-- Quick add & Sign out -->
+    <rect x="612" y="138" width="46" height="20" rx="6" fill="#ffffff" stroke="#e2ede6"/>
+    <text x="616" y="151" font-family="Inter, sans-serif" font-size="7" font-weight="600" fill="#0f1a14">+ Quick Add</text>
+
+    <rect x="664" y="138" width="40" height="20" rx="10" fill="#0f1a14"/>
+    <text x="668" y="151" font-family="Inter, sans-serif" font-size="6.5" font-weight="600" fill="#ffffff">↪ Sign Out</text>
+
+    <!-- Sidebar navigation matching Screenshot 1 -->
+    <rect x="280" y="166" width="105" height="304" fill="#ffffff" stroke="#e2ede6"/>
+    
+    <rect x="284" y="174" width="97" height="20" rx="10" fill="#16a34a"/>
+    <text x="296" y="188" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="#ffffff">📊 Dashboard</text>
+
+    <text x="296" y="206" font-family="Inter, sans-serif" font-size="7.5" font-weight="500" fill="#4a5568">📋 Tasks</text>
+    <text x="296" y="222" font-family="Inter, sans-serif" font-size="7.5" font-weight="500" fill="#4a5568">📅 Calendar</text>
+    <text x="296" y="238" font-family="Inter, sans-serif" font-size="7.5" font-weight="500" fill="#4a5568">☀️ My Day</text>
+    <text x="296" y="254" font-family="Inter, sans-serif" font-size="7.5" font-weight="500" fill="#4a5568">🎯 Goals</text>
+    <text x="296" y="270" font-family="Inter, sans-serif" font-size="7.5" font-weight="500" fill="#4a5568">⏱️ Time Tracker</text>
+    <text x="296" y="286" font-family="Inter, sans-serif" font-size="7.5" font-weight="500" fill="#4a5568">📊 Reports</text>
+    <text x="296" y="302" font-family="Inter, sans-serif" font-size="7.5" font-weight="500" fill="#4a5568">📝 Notes</text>
+    <text x="296" y="318" font-family="Inter, sans-serif" font-size="7.5" font-weight="500" fill="#4a5568">🏷️ Tags &amp; Categories</text>
+    <text x="296" y="334" font-family="Inter, sans-serif" font-size="7.5" font-weight="500" fill="#4a5568">🔔 Reminders</text>
+    <text x="296" y="350" font-family="Inter, sans-serif" font-size="7.5" font-weight="500" fill="#4a5568">🛡️ Backup &amp; Restore</text>
+    <text x="296" y="366" font-family="Inter, sans-serif" font-size="7.5" font-weight="500" fill="#4a5568">⚙️ Settings</text>
+
+    <!-- User Profile Footer -->
+    <rect x="284" y="434" width="97" height="30" rx="6" fill="#f4f9f6"/>
+    <circle cx="295" cy="449" r="7" fill="#16a34a"/>
+    <text x="295" y="452" text-anchor="middle" font-family="Inter, sans-serif" font-size="7" fill="#ffffff">👤</text>
+    <text x="306" y="447" font-family="Inter, sans-serif" font-size="7" font-weight="700" fill="#0f1a14">Fenora</text>
+    <text x="306" y="455" font-family="Inter, sans-serif" font-size="5.5" fill="#718096">Signed in locally</text>
+
+    <!-- Main Content Region -->
+    <rect x="390" y="174" width="76" height="12" rx="6" fill="#e8f7ed"/>
+    <text x="394" y="183" font-family="Inter, sans-serif" font-size="6" font-weight="700" fill="#16a34a">⚡ MACRO WORKSPACE HUB</text>
+    <text x="390" y="200" font-family="Sora, sans-serif" font-size="12" font-weight="800" fill="#0f1a14">Good evening, Fenora 👋</text>
+    <text x="390" y="210" font-family="Inter, sans-serif" font-size="6.5" fill="#718096">Complete lifetime activity, project milestones, and system audit log.</text>
+
+    <!-- + Add Task Button -->
+    <rect x="696" y="188" width="58" height="20" rx="6" fill="#16a34a"/>
+    <text x="702" y="201" font-family="Inter, sans-serif" font-size="7" font-weight="700" fill="#ffffff">+ Add Task</text>
+
+    <!-- 5 KPI Cards Row matching Screenshot 1 -->
+    <rect x="390" y="218" width="68" height="42" rx="8" fill="#ffffff" stroke="#e2ede6"/>
+    <text x="396" y="232" font-family="Inter, sans-serif" font-size="6" font-weight="700" fill="#16a34a">Total Tasks</text>
+    <text x="396" y="252" font-family="Sora, sans-serif" font-size="14" font-weight="800" fill="#0f1a14">0</text>
+
+    <rect x="464" y="218" width="68" height="42" rx="8" fill="#ffffff" stroke="#e2ede6"/>
+    <text x="470" y="232" font-family="Inter, sans-serif" font-size="6" font-weight="700" fill="#16a34a">Completed</text>
+    <text x="470" y="252" font-family="Sora, sans-serif" font-size="14" font-weight="800" fill="#16a34a">0</text>
+
+    <rect x="538" y="218" width="68" height="42" rx="8" fill="#ffffff" stroke="#e2ede6"/>
+    <text x="544" y="232" font-family="Inter, sans-serif" font-size="6" font-weight="700" fill="#d97706">In Progress</text>
+    <text x="544" y="252" font-family="Sora, sans-serif" font-size="14" font-weight="800" fill="#d97706">0</text>
+
+    <rect x="612" y="218" width="68" height="42" rx="8" fill="#ffffff" stroke="#e2ede6"/>
+    <text x="618" y="232" font-family="Inter, sans-serif" font-size="6" font-weight="700" fill="#dc2626">Overdue</text>
+    <text x="618" y="252" font-family="Sora, sans-serif" font-size="14" font-weight="800" fill="#dc2626">0</text>
+
+    <rect x="686" y="218" width="68" height="42" rx="8" fill="#ffffff" stroke="#e2ede6"/>
+    <text x="692" y="230" font-family="Inter, sans-serif" font-size="5.5" font-weight="700" fill="#718096">Overall Rate</text>
+    <text x="692" y="246" font-family="Sora, sans-serif" font-size="12" font-weight="800" fill="#16a34a">0%</text>
+
+    <!-- Upcoming Reminders & Goals Boxes -->
+    <rect x="390" y="268" width="180" height="74" rx="8" fill="#ffffff" stroke="#e2ede6"/>
+    <text x="398" y="282" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#0f1a14">🔔 Upcoming Reminders</text>
+    <text x="398" y="306" font-family="Inter, sans-serif" font-size="6.5" fill="#a0aec0">No upcoming reminders.</text>
+
+    <rect x="576" y="268" width="178" height="74" rx="8" fill="#ffffff" stroke="#e2ede6"/>
+    <text x="584" y="282" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#0f1a14">🎯 Goals</text>
+    <text x="584" y="306" font-family="Inter, sans-serif" font-size="6.5" fill="#a0aec0">No goals yet — set one on the Goals page.</text>
+
+    <!-- Recent Activity Log Box -->
+    <rect x="390" y="350" width="364" height="110" rx="8" fill="#ffffff" stroke="#e2ede6"/>
+    <text x="398" y="364" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#0f1a14">⚡ Recent Activity Log</text>
+    <rect x="700" y="355" width="48" height="12" rx="6" fill="#e8f7ed"/>
+    <text x="704" y="363" font-family="Inter, sans-serif" font-size="5.5" font-weight="700" fill="#16a34a">1 events logged</text>
+
+    <rect x="398" y="372" width="348" height="34" rx="6" fill="#f8faf9"/>
+    <circle cx="410" cy="389" r="6" fill="#e8f7ed"/>
+    <text x="410" y="391" text-anchor="middle" font-family="Inter, sans-serif" font-size="6">🔔</text>
+    <text x="422" y="386" font-family="Inter, sans-serif" font-size="7" font-weight="700" fill="#0f1a14">hello</text>
+    <rect x="444" y="378" width="60" height="10" rx="4" fill="#e8f7ed"/>
+    <text x="447" y="385" font-family="Inter, sans-serif" font-size="5.5" font-weight="700" fill="#16a34a">Reminder Scheduled</text>
+    <text x="422" y="397" font-family="Inter, sans-serif" font-size="6" fill="#718096">Scheduled for 09:39 am</text>
+    <text x="704" y="390" font-family="Inter, sans-serif" font-size="6" fill="#a0aec0">Today, 09:38 AM</text>
+  </g>
+
+  <!-- ===== SMARTPHONE MOCKUP ===== -->
+  <g filter="url(#cardShadow)">
+    <rect x="68" y="140" width="200" height="390" rx="28" fill="url(#phoneGrad)"/>
+    <rect x="76" y="156" width="184" height="358" rx="22" fill="#ffffff"/>
+
+    <!-- Notch -->
+    <rect x="135" y="162" width="66" height="12" rx="6" fill="#0a140e"/>
+
+    <!-- Phone App Screen matching Screenshot 1 -->
+    <rect x="88" y="184" width="20" height="20" rx="5" fill="#ffffff" stroke="#e2ede6"/>
+    <text x="98" y="196" text-anchor="middle" font-family="Inter, sans-serif" font-size="8">📋</text>
+    <text x="114" y="196" font-family="Sora, sans-serif" font-size="10" font-weight="800" fill="#0f1a14">TaskFlow</text>
+
+    <text x="88" y="218" font-family="Sora, sans-serif" font-size="11" font-weight="700" fill="#0f1a14">Good evening! 👋</text>
+    <text x="88" y="228" font-family="Inter, sans-serif" font-size="7" fill="#718096">Offline-first local workspace</text>
+
+    <!-- Mini stats card -->
+    <rect x="88" y="238" width="160" height="42" rx="8" fill="#f4f9f6" stroke="#e2ede6"/>
+    <g>
+      <text x="100" y="254" font-family="Sora, sans-serif" font-size="12" font-weight="800" fill="#0f1a14">0</text>
+      <text x="96" y="266" font-family="Inter, sans-serif" font-size="6" fill="#718096">Tasks</text>
+
+      <text x="138" y="254" font-family="Sora, sans-serif" font-size="12" font-weight="800" fill="#16a34a">0</text>
+      <text x="128" y="266" font-family="Inter, sans-serif" font-size="6" fill="#718096">Completed</text>
+
+      <text x="178" y="254" font-family="Sora, sans-serif" font-size="12" font-weight="800" fill="#d97706">0</text>
+      <text x="172" y="266" font-family="Inter, sans-serif" font-size="6" fill="#718096">Pending</text>
+
+      <text x="216" y="254" font-family="Sora, sans-serif" font-size="12" font-weight="800" fill="#dc2626">0</text>
+      <text x="210" y="266" font-family="Inter, sans-serif" font-size="6" fill="#718096">Overdue</text>
+    </g>
+
+    <!-- Quick action buttons -->
+    <rect x="88" y="290" width="160" height="26" rx="6" fill="#16a34a"/>
+    <text x="168" y="306" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="#ffffff">+ Add New Task</text>
+
+    <!-- Recent activity -->
+    <rect x="88" y="326" width="160" height="70" rx="8" fill="#ffffff" stroke="#e2ede6"/>
+    <text x="96" y="340" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#0f1a14">Recent Activity</text>
+    <text x="96" y="356" font-family="Inter, sans-serif" font-size="7" font-weight="600" fill="#16a34a">🔔 hello</text>
+    <text x="96" y="366" font-family="Inter, sans-serif" font-size="6" fill="#718096">Reminder Scheduled for 09:39 am</text>
+  </g>
+</svg>

@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta name="description" content="TaskFlow Personal Edition — Focus on What Matters. A modern offline-first desktop productivity workspace built for speed, privacy, and simplicity. No cloud. No sign up.">
+<meta name="author" content="Fenora Infotech">
+<meta name="theme-color" content="#0f3d24">
+<title>TaskFlow — Focus on What Matters. (Offline-First Productivity Workspace)</title>
+
+<!-- Official Logo Favicon -->
+<link rel="icon" type="image/png" href="assets/logo-mark.png">
+<link rel="apple-touch-icon" href="assets/logo-mark.png">
+
+<!-- Google Fonts: Geist & Inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Social preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="TaskFlow — Focus on What Matters.">
+<meta property="og:description" content="Modern offline-first productivity workspace for individuals. No cloud. No sign up.">
+<meta property="og:image" content="assets/og-image.png">
+<meta property="og:url" content="https://taskflow.app/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TaskFlow — Focus on What Matters.">
+<meta name="twitter:description" content="Modern offline-first productivity workspace for individuals. No cloud. No sign up.">
+<meta name="twitter:image" content="assets/og-image.png">
+
+<!-- Canonical & Manifest -->
+<link rel="canonical" href="https://taskflow.app/">
+<link rel="manifest" href="manifest.json">
+
+<!-- Schema.org SoftwareApplication JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "TaskFlow Personal Edition",
+  "operatingSystem": "Windows 10, Windows 11 (64-bit)",
+  "applicationCategory": "ProductivityApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0.00",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Fenora Infotech",
+    "url": "https://fenorainfotech-tawny.vercel.app/"
+  },
+  "description": "TaskFlow is a modern offline-first desktop productivity workspace built for speed, privacy, and simplicity."
+}
+</script>
+
+<link rel="preload" href="assets/hero-illustration.svg" as="image" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<noscript><style>.preloader{display:none !important;} .reveal{opacity:1 !important; transform:none !important; filter:none !important;}</style></noscript>
+</head>
+<body class="loading">
+
+<!-- ===== 0. PRELOADER ===== -->
+<div class="preloader" id="preloader">
+  <div class="preloader-content">
+    <div class="preloader-logo-wrap">
+      <img src="assets/logo-mark.png" alt="TaskFlow Logo Loading" width="64" height="64" class="preloader-logo">
+    </div>
+    <div class="preloader-bar-bg">
+      <div class="preloader-bar-fill" id="preloaderFill"></div>
+    </div>
+    <span class="preloader-text" id="preloaderText">Loading TaskFlow 0%</span>
+  </div>
+</div>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ===== HEADER NAVIGATION ===== -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand" aria-label="TaskFlow home">
+      <div class="logo-wrapper">
+        <img src="assets/logo-mark.png" alt="TaskFlow Logo" class="brand-logo-img" width="48" height="48">
+      </div>
+      <span class="brand-text">
+        <strong>TaskFlow</strong>
+        <span class="v-badge">v1.0 Personal</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#showcase" class="nav-link">Showcase</a>
+      <a href="#why-taskflow" class="nav-link">Why TaskFlow</a>
+      <a href="#demo" class="nav-link">Interactive Demo</a>
+      <a href="#roadmap" class="nav-link">Roadmap</a>
+      <a href="#download" class="nav-link">Download</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn-primary btn-sm btn-magnetic" href="assets/TaskFlow Setup 1.0.0.exe" download="TaskFlow Setup 1.0.0.exe">
+        <svg class="dl-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        <span>Download Free</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <nav id="mobileNav" class="mobile-nav" aria-label="Mobile">
+    <div class="mobile-nav-brand">
+      <div class="logo-wrapper">
+        <img src="assets/logo-mark.png" alt="TaskFlow Logo" width="32" height="32">
+      </div>
+      <strong>TaskFlow Personal Edition</strong>
+    </div>
+    <a href="#features">Features</a>
+    <a href="#showcase">Showcase</a>
+    <a href="#why-taskflow">Why TaskFlow</a>
+    <a href="#demo">Interactive Demo</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="#download">Download</a>
+    <a class="btn btn-primary btn-sm" href="#download">🟢 Download Free</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ===== 1. HERO SECTION (100vh) ===== -->
+  <section class="hero-fullscreen" id="top">
+    <!-- Animated particle canvas -->
+    <canvas id="particleCanvas" class="hero-particles"></canvas>
+    
+    <!-- Floating ambient glow orbs -->
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+
+    <div class="wrap hero-content-grid">
+      <!-- Left Copy -->
+      <div class="hero-copy-col reveal reveal-up">
+        <div class="hero-eyebrow-pill">
+          <span class="pill-logo-wrap">
+            <img src="assets/logo-mark.png" alt="TaskFlow Badge" width="16" height="16">
+          </span>
+          <span class="pill-sparkle">✨</span>
+          <span>VERSION 1.0 PERSONAL EDITION IS HERE</span>
+        </div>
+
+        <h1 class="hero-headline">
+          <span class="word-reveal">Focus on</span><br>
+          <span class="word-reveal text-gradient">What Matters.</span>
+        </h1>
+
+        <p class="hero-subtext">
+          TaskFlow is a modern offline-first productivity workspace designed for individuals who value speed, privacy, and simplicity.
+        </p>
+
+        <div class="hero-ctas-row">
+          <a href="assets/TaskFlow Setup 1.0.0.exe" download="TaskFlow Setup 1.0.0.exe" class="btn btn-primary btn-hero btn-magnetic" id="heroDownloadBtn">
+            <svg class="dl-btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Download Free</span>
+          </a>
+
+          <button class="btn btn-glass btn-hero" id="watchDemoBtn" type="button">
+            <span class="play-icon">▶</span>
+            <span>Watch Demo</span>
+          </button>
+        </div>
+
+        <div class="hero-meta-strip">
+          <span class="meta-tag">⚡ Zero Latency</span>
+          <span class="meta-tag">🔒 100% Offline</span>
+          <span class="meta-tag">🇮🇳 Made in India</span>
+        </div>
+      </div>
+
+      <!-- Right Side: 3D Floating Laptop Mockup & Floating Interactive Cards -->
+      <div class="hero-art-col">
+        <div class="laptop-3d-wrapper tilt-target">
+          <img src="assets/hero-illustration.svg" alt="TaskFlow Laptop & Mobile Application Mockup" class="laptop-mockup-img" width="920" height="640">
+
+          <!-- Floating UI Feature Cards -->
+          <div class="floating-ui-card f-card-1 float-anim-1">
+            <span class="f-card-icon">📋</span>
+            <div class="f-card-info">
+              <strong>Task Completed</strong>
+              <small>Design Landing Page • Just now</small>
+            </div>
+            <span class="f-card-chk">✓</span>
+          </div>
+
+          <div class="floating-ui-card f-card-2 float-anim-2">
+            <span class="f-card-icon">📅</span>
+            <div class="f-card-info">
+              <strong>Calendar Synced</strong>
+              <small>May 2026 Focus Sprint</small>
+            </div>
+          </div>
+
+          <div class="floating-ui-card f-card-3 float-anim-3">
+            <span class="f-card-icon">🔔</span>
+            <div class="f-card-info">
+              <strong>Smart Reminder</strong>
+              <small>Team Sync • 11:00 AM</small>
+            </div>
+          </div>
+
+          <div class="floating-ui-card f-card-4 float-anim-4">
+            <span class="f-card-icon">📊</span>
+            <div class="f-card-info">
+              <strong>94% Velocity</strong>
+              <small>Personal Productivity</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 2. TRUSTED COUNTER SECTION (Glassmorphic Bar) ===== -->
+  <section class="trusted-section">
+    <div class="wrap">
+      <div class="trusted-glass-bar reveal">
+        <!-- Metric 1: Free -->
+        <div class="trust-metric-card tilt-card" style="--d:0">
+          <div class="trust-icon-pill green-glow">💚</div>
+          <div class="count-num" data-target="100" data-suffix="%">0%</div>
+          <h4 class="count-title">100% Free Forever</h4>
+          <span class="trust-micro-badge">Zero Subscriptions</span>
+        </div>
+
+        <div class="trust-divider"></div>
+
+        <!-- Metric 2: Offline -->
+        <div class="trust-metric-card tilt-card" style="--d:1">
+          <div class="trust-icon-pill amber-glow">⚡</div>
+          <div class="count-num" data-target="100" data-suffix="%">0%</div>
+          <h4 class="count-title">Offline First Architecture</h4>
+          <span class="trust-micro-badge">Zero Server Latency</span>
+        </div>
+
+        <div class="trust-divider"></div>
+
+        <!-- Metric 3: Privacy -->
+        <div class="trust-metric-card tilt-card" style="--d:2">
+          <div class="trust-icon-pill blue-glow">🔒</div>
+          <div class="count-num" data-target="100" data-suffix="%">0%</div>
+          <h4 class="count-title">Privacy First Security</h4>
+          <span class="trust-micro-badge">AES-256 Encrypted</span>
+        </div>
+
+        <div class="trust-divider"></div>
+
+        <!-- Metric 4: Windows -->
+        <div class="trust-metric-card tilt-card" style="--d:3">
+          <div class="trust-icon-pill purple-glow">🪟</div>
+          <div class="count-num" data-target="64" data-prefix="Windows " data-suffix="-bit">0</div>
+          <h4 class="count-title">Made for Windows 10/11</h4>
+          <span class="trust-micro-badge">NSIS Setup Installer</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. FEATURES GRID (8 Cards with 3D Tilt & Glow) ===== -->
+  <section class="section features-section" id="features">
+    <div class="wrap">
+      <div class="section-header center reveal">
+        <span class="glass-pill">CRAFTED FOR SPEED &amp; PRIVACY</span>
+        <h2 class="section-title">Built for Your Daily Flow</h2>
+        <p class="section-subtitle">8 high-performance modules engineered into a single lightweight desktop app.</p>
+      </div>
+
+      <!-- Linear-Style Interactive Bento Grid -->
+      <div class="bento-grid">
+        <!-- Hero Bento 1: Task Management -->
+        <article class="bento-card bento-wide tilt-card reveal" data-feature="tasks" style="--d:0">
+          <div class="card-glow"></div>
+          <div class="bento-content">
+            <span class="bento-badge">CORE WORKFLOW</span>
+            <h3>Task Management &amp; Excel Grid</h3>
+            <p>Create, organize, prioritize, and complete your daily tasks with an intuitive spreadsheet-style interface.</p>
+            
+            <div class="bento-mini-preview task-checklist-preview">
+              <div class="bento-task-item done">
+                <input type="checkbox" checked class="bento-chk" id="bChk1">
+                <label for="bChk1">Design landing page hero section</label>
+                <span class="bento-priority-badge p-high">High</span>
+              </div>
+              <div class="bento-task-item">
+                <input type="checkbox" class="bento-chk" id="bChk2">
+                <label for="bChk2">Build local SQLite query index</label>
+                <span class="bento-priority-badge p-med">Medium</span>
+              </div>
+              <div class="bento-task-item">
+                <input type="checkbox" class="bento-chk" id="bChk3">
+                <label for="bChk3">Review AES-256 backup encryption</label>
+                <span class="bento-priority-badge p-low">Low</span>
+              </div>
+            </div>
+            <span class="f-link">Inspect Task Engine &rarr;</span>
+          </div>
+        </article>
+
+        <!-- Hero Bento 2: Air-Gapped Privacy -->
+        <article class="bento-card bento-wide tilt-card reveal" data-feature="security" style="--d:1">
+          <div class="card-glow"></div>
+          <div class="bento-content">
+            <span class="bento-badge green-badge">AIR-GAPPED PRIVACY</span>
+            <h3>Local SQLite &amp; Encrypted Storage</h3>
+            <p>Everything is stored safely on your machine. Zero cloud servers, zero telemetry, 100% privacy.</p>
+
+            <div class="bento-mini-preview security-preview">
+              <div class="sec-badge-row">
+                <span class="sec-icon">🔒</span>
+                <div>
+                  <strong>100% Local Encrypted DB</strong>
+                  <small>app.getPath('userData')/taskflow-ai.db</small>
+                </div>
+              </div>
+              <div class="sec-status-bar">
+                <span class="pulse-dot"></span>
+                <span>Zero Cloud Connections • AES-256 Protection</span>
+              </div>
+            </div>
+            <span class="f-link">Inspect Privacy Specs &rarr;</span>
+          </div>
+        </article>
+
+        <!-- Bento 3: Calendar -->
+        <article class="bento-card tilt-card reveal" data-feature="calendar" style="--d:2">
+          <div class="card-glow"></div>
+          <div class="f-icon-box">📅</div>
+          <h3>Visual Calendar</h3>
+          <p>Plan work blocks and track deadlines on an interactive monthly time grid.</p>
+          <span class="f-link">Inspect Calendar &rarr;</span>
+        </article>
+
+        <!-- Bento 4: Reminders -->
+        <article class="bento-card tilt-card reveal" data-feature="reminders" style="--d:3">
+          <div class="card-glow"></div>
+          <div class="f-icon-box">⏰</div>
+          <h3>Smart Alarms</h3>
+          <p>Desktop notifications and Web Audio API alerts that ring even when minimized.</p>
+          <span class="f-link">Inspect Reminders &rarr;</span>
+        </article>
+
+        <!-- Bento 5: Analytics -->
+        <article class="bento-card tilt-card reveal" data-feature="analytics" style="--d:4">
+          <div class="card-glow"></div>
+          <div class="f-icon-box">📊</div>
+          <h3>Velocity Analytics</h3>
+          <p>Track your completion velocity and build positive daily working habits.</p>
+          <span class="f-link">Inspect Analytics &rarr;</span>
+        </article>
+
+        <!-- Bento 6: Command Palette -->
+        <article class="bento-card tilt-card reveal" data-feature="command" style="--d:5">
+          <div class="card-glow"></div>
+          <div class="f-icon-box">🔍</div>
+          <h3>Fast Search</h3>
+          <p>Sub-millisecond search across all tasks and notes with <kbd>Ctrl</kbd> + <kbd>K</kbd>.</p>
+          <span class="f-link">Inspect Command &rarr;</span>
+        </article>
+
+        <!-- Bento 7: Notes -->
+        <article class="bento-card tilt-card reveal" data-feature="notes" style="--d:6">
+          <div class="card-glow"></div>
+          <div class="f-icon-box">📝</div>
+          <h3>Markdown Notes</h3>
+          <p>Capture research, documentation, and ideas with rich Markdown formatting.</p>
+          <span class="f-link">Inspect Notes &rarr;</span>
+        </article>
+
+        <!-- Bento 8: Focus Mode -->
+        <article class="bento-card tilt-card reveal" data-feature="time" style="--d:7">
+          <div class="card-glow"></div>
+          <div class="f-icon-box">🎯</div>
+          <h3>Focus Mode &amp; Timer</h3>
+          <p>Eliminate distractions with a focus timer linked directly to active priority tasks.</p>
+          <span class="f-link">Inspect Focus &rarr;</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. PRODUCT SHOWCASE (Video Demo Showcase) ===== -->
+  <section class="section showcase-section" id="showcase">
+    <div class="wrap">
+      <div class="section-header center reveal">
+        <span class="glass-pill">PRODUCT SHOWCASE</span>
+        <h2 class="section-title">Designed for Ultimate Clarity</h2>
+        <p class="section-subtitle">Watch TaskFlow Personal Edition in action — fast, fluid, and 100% offline desktop workspace.</p>
+      </div>
+
+      <div class="showcase-window-container reveal">
+        <div class="showcase-window-bar">
+          <div class="window-controls">
+            <span class="w-dot close-dot"></span>
+            <span class="w-dot min-dot"></span>
+            <span class="w-dot max-dot"></span>
+          </div>
+          <span class="window-title-text">TaskFlow Desktop — Video Walkthrough (TaskFlow.mp4)</span>
+          <span class="window-badge">🎬 100% Offline Video</span>
+        </div>
+
+        <div class="showcase-image-wrapper video-container">
+          <video src="assets/TaskFlow.mp4" class="showcase-video-player" controls autoplay loop muted playsinline poster="assets/hero-illustration.svg" title="TaskFlow Desktop Video Walkthrough"></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. WHY TASKFLOW (Split Layout Deep-Dives) ===== -->
+  <section class="section why-section" id="why-taskflow">
+    <div class="wrap">
+      <!-- Split Row 1: Privacy -->
+      <div class="split-row reveal">
+        <div class="split-content-side">
+          <span class="split-tag">DATA SOVEREIGNTY</span>
+          <h2>Privacy First, Always</h2>
+          <p>We believe your personal tasks, notes, and goals belong exclusively to you. TaskFlow never sends telemetry, tracks user behavior, or uploads data to external servers.</p>
+          <ul class="split-bullets">
+            <li><span class="b-chk">✓</span> Zero Cloud Telemetry</li>
+            <li><span class="b-chk">✓</span> AES-256 Encrypted Local Backups</li>
+            <li><span class="b-chk">✓</span> Air-Gapped Network Interception</li>
+          </ul>
+        </div>
+        <div class="split-visual-side">
+          <div class="glass-card-visual">
+            <div class="v-icon">🔒</div>
+            <h3>100% Local Encrypted Database</h3>
+            <p>Stored locally at <code>app.getPath('userData')/taskflow-ai.db</code></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Split Row 2: Offline -->
+      <div class="split-row reverse-row reveal">
+        <div class="split-content-side">
+          <span class="split-tag">ZERO DEPENDENCY</span>
+          <h2>Offline First Architecture</h2>
+          <p>Whether you're in an airplane, remote cabin, or restricted network, TaskFlow remains 100% functional without an active internet connection.</p>
+          <ul class="split-bullets">
+            <li><span class="b-chk">✓</span> Instant Cold Starts (&lt; 200ms)</li>
+            <li><span class="b-chk">✓</span> Sub-millisecond SQLite Queries</li>
+            <li><span class="b-chk">✓</span> No Account Login Required</li>
+          </ul>
+        </div>
+        <div class="split-visual-side">
+          <div class="glass-card-visual">
+            <div class="v-icon">🌐</div>
+            <h3>Uninterrupted Productivity</h3>
+            <p>No waiting for API responses or server sync timeouts.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Split Row 3: Speed & Minimal UI -->
+      <div class="split-row reveal">
+        <div class="split-content-side">
+          <span class="split-tag">LIGHTWEIGHT PERFORMANCE</span>
+          <h2>Lightning Fast &amp; Distraction Free</h2>
+          <p>Stop juggling 5 different tools. TaskFlow consolidates tasks, calendar, notes, alarms, and goals into a clean, unified workspace.</p>
+          <ul class="split-bullets">
+            <li><span class="b-chk">✓</span> Keyboard-First Shortcuts (Ctrl+K)</li>
+            <li><span class="b-chk">✓</span> Minimalist Aesthetics</li>
+            <li><span class="b-chk">✓</span> Smooth 60 FPS Micro-Interactions</li>
+          </ul>
+        </div>
+        <div class="split-visual-side">
+          <div class="glass-card-visual">
+            <div class="v-icon">⚡</div>
+            <h3>Sub-Second Workflows</h3>
+            <p>Focus entirely on accomplishing goals rather than configuring software.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. INTERACTIVE DEMO SECTION (Real App Workflows) ===== -->
+  <section class="section demo-section" id="demo">
+    <div class="wrap">
+      <div class="section-header center reveal">
+        <span class="glass-pill">REAL APP INTERACTIVE DEMO</span>
+        <h2 class="section-title">Experience the Real TaskFlow Desktop UI</h2>
+        <p class="section-subtitle">Click the tabs below to switch between actual screens from TaskFlow desktop workspace.</p>
+      </div>
+
+      <!-- Pro Desktop App Window Frame -->
+      <div class="demo-window-frame reveal">
+        <!-- Mac/Windows Hybrid Title Bar -->
+        <div class="demo-app-topbar">
+          <div class="window-controls-side">
+            <span class="w-dot dot-close"></span>
+            <span class="w-dot dot-min"></span>
+            <span class="w-dot dot-max"></span>
+          </div>
+
+          <div class="window-title-center">
+            <div class="logo-wrapper mini-logo">
+              <img src="assets/logo-mark.png" alt="TaskFlow Logo" width="20" height="20">
+            </div>
+            <span class="window-app-name">TaskFlow Desktop</span>
+            <span class="window-ver-badge">v1.0.0 Personal Edition</span>
+          </div>
+
+          <div class="window-actions-side">
+            <span class="db-status-pill"><span class="green-dot"></span> SQLite Local (0ms)</span>
+            <div class="app-search-input">
+              <span>🔍</span>
+              <span>Search...</span>
+              <kbd>CTRL+K</kbd>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-window-body">
+          <!-- Real Desktop App Sidebar Navigation -->
+          <div class="demo-sidebar">
+            <div class="sidebar-group">
+              <span class="sidebar-cat-label">MAIN WORKSPACE</span>
+              <button class="demo-menu-item active" data-app-tab="dashboard">
+                <span>📊 Dashboard</span>
+              </button>
+              <button class="demo-menu-item" data-app-tab="tasks">
+                <span>📋 Tasks</span>
+                <span class="side-count-badge">12</span>
+              </button>
+              <button class="demo-menu-item" data-app-tab="calendar">
+                <span>📅 Calendar</span>
+                <span class="side-count-badge">3</span>
+              </button>
+              <button class="demo-menu-item" data-app-tab="myday">
+                <span>☀️ My Day</span>
+                <span class="side-count-badge green-bg">4</span>
+              </button>
+              <button class="demo-menu-item" data-app-tab="goals">
+                <span>🎯 Goals</span>
+                <span class="side-count-badge">2</span>
+              </button>
+            </div>
+
+            <div class="sidebar-group">
+              <span class="sidebar-cat-label">TOOLS &amp; UTILITIES</span>
+              <button class="demo-menu-item" type="button"><span>⏱️ Time Tracker</span></button>
+              <button class="demo-menu-item" type="button"><span>📝 Notes</span></button>
+              <button class="demo-menu-item" type="button"><span>🔔 Alarms</span></button>
+              <button class="demo-menu-item" type="button"><span>🛡️ Local Backup</span></button>
+            </div>
+
+            <div class="demo-user-profile">
+              <span class="user-avatar">👤</span>
+              <div>
+                <strong>Fenora</strong>
+                <small>Local DB • AES-256 Protected</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main App Workspace Area -->
+          <div class="demo-main-area">
+            <!-- 1. Dashboard View (Populated Real Stats) -->
+            <div class="app-view-tab active" id="view-dashboard">
+              <div class="view-header-row">
+                <div>
+                  <span class="macro-tag">⚡ MACRO WORKSPACE HUB</span>
+                  <h3>Good evening, Fenora 👋</h3>
+                  <p>Here is your real-time local productivity overview for today.</p>
+                </div>
+                <div class="btn-group-row">
+                  <button class="btn btn-primary btn-sm" type="button">+ Add Task</button>
+                </div>
+              </div>
+
+              <!-- 5 Metric Cards -->
+              <div class="app-kpi-grid">
+                <div class="kpi-card">
+                  <span class="kpi-label blue-lbl">Total Tasks</span>
+                  <span class="kpi-val">14</span>
+                </div>
+                <div class="kpi-card">
+                  <span class="kpi-label green-lbl">Completed</span>
+                  <span class="kpi-val green-txt">9</span>
+                </div>
+                <div class="kpi-card">
+                  <span class="kpi-label amber-lbl">In Progress</span>
+                  <span class="kpi-val amber-txt">4</span>
+                </div>
+                <div class="kpi-card">
+                  <span class="kpi-label red-lbl">Overdue</span>
+                  <span class="kpi-val red-txt">1</span>
+                </div>
+                <div class="kpi-card">
+                  <span class="kpi-label gray-lbl">Overall Rate</span>
+                  <span class="kpi-val green-txt">72%</span>
+                </div>
+              </div>
+
+              <!-- Overall Completion Progress Bar -->
+              <div class="app-box progress-bar-box">
+                <div class="progress-bar-header">
+                  <strong>Daily Goal Velocity</strong>
+                  <span>72% Completed</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 72%;"></div>
+                </div>
+              </div>
+
+              <div class="app-two-col-row">
+                <div class="app-box">
+                  <div class="box-h-row">
+                    <h4>🔔 Upcoming Alarms</h4>
+                    <span class="badge-pill amber-pill">2 Active</span>
+                  </div>
+                  <div class="mini-alert-list">
+                    <div class="mini-alert-item">
+                      <span>🔔</span>
+                      <div>
+                        <strong>Quarterly Roadmap Review</strong>
+                        <small>Today at 09:30 PM</small>
+                      </div>
+                    </div>
+                    <div class="mini-alert-item">
+                      <span>🛡️</span>
+                      <div>
+                        <strong>Local DB Encryption Check</strong>
+                        <small>Tomorrow at 08:00 AM</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="app-box">
+                  <div class="box-h-row">
+                    <h4>🎯 Active Goals</h4>
+                    <span class="badge-pill green-pill">2 Active</span>
+                  </div>
+                  <div class="mini-alert-list">
+                    <div class="mini-alert-item">
+                      <span>🚀</span>
+                      <div>
+                        <strong>TaskFlow v1.0 Launch</strong>
+                        <small>Progress: 85% • Target 15 Aug</small>
+                      </div>
+                    </div>
+                    <div class="mini-alert-item">
+                      <span>⚡</span>
+                      <div>
+                        <strong>Sub-200ms Cold Start Speed</strong>
+                        <small>Progress: 90% • Target 20 Aug</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Tasks View (Real Excel Spreadsheet Table) -->
+            <div class="app-view-tab" id="view-tasks">
+              <div class="view-header-row">
+                <div>
+                  <h3>Tasks Grid (Spreadsheet Engine)</h3>
+                  <p>In-place editable Excel-like grid with sub-task priority rules.</p>
+                </div>
+                <div class="btn-group-row">
+                  <button class="btn btn-outline btn-sm" type="button">📥 Export CSV</button>
+                  <button class="btn btn-primary btn-sm" type="button">+ Add Task</button>
+                </div>
+              </div>
+
+              <div class="table-filter-bar">
+                <div class="t-search">🔍 Filter tasks by title or category...</div>
+                <div class="filter-pills">
+                  <button class="f-pill active" type="button">All (14)</button>
+                  <button class="f-pill" type="button">Active (5)</button>
+                  <button class="f-pill" type="button">Completed (9)</button>
+                </div>
+              </div>
+
+              <div class="app-table-wrapper">
+                <table class="app-excel-table">
+                  <thead>
+                    <tr><th></th><th>Task Title</th><th>Category</th><th>Priority</th><th>Status</th><th>Due Date</th><th>Progress</th><th>Actions</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr class="t-row">
+                      <td><input type="checkbox" class="tbl-chk"></td>
+                      <td><strong>Design TaskFlow Landing Page</strong></td>
+                      <td><span class="cat-pill design">Design</span></td>
+                      <td><span class="p-badge p-high">High</span></td>
+                      <td><span class="st-badge st-prog">In Progress</span></td>
+                      <td>Today</td>
+                      <td><span class="prog-txt">85%</span></td>
+                      <td><button class="btn-tbl-act">✏️</button></td>
+                    </tr>
+                    <tr class="t-row done-row">
+                      <td><input type="checkbox" checked class="tbl-chk"></td>
+                      <td><del>Build Local SQLite Query Index</del></td>
+                      <td><span class="cat-pill backend">Backend</span></td>
+                      <td><span class="p-badge p-high">High</span></td>
+                      <td><span class="st-badge st-done">Done</span></td>
+                      <td>Yesterday</td>
+                      <td><span class="prog-txt green-txt">100%</span></td>
+                      <td><button class="btn-tbl-act">✏️</button></td>
+                    </tr>
+                    <tr class="t-row done-row">
+                      <td><input type="checkbox" checked class="tbl-chk"></td>
+                      <td><del>Setup AES-256 Backup Encryption</del></td>
+                      <td><span class="cat-pill sec">Security</span></td>
+                      <td><span class="p-badge p-med">Medium</span></td>
+                      <td><span class="st-badge st-done">Done</span></td>
+                      <td>12 Aug</td>
+                      <td><span class="prog-txt green-txt">100%</span></td>
+                      <td><button class="btn-tbl-act">✏️</button></td>
+                    </tr>
+                    <tr class="t-row">
+                      <td><input type="checkbox" class="tbl-chk"></td>
+                      <td><strong>Draft v1.0 User Guide &amp; Docs</strong></td>
+                      <td><span class="cat-pill docs">Docs</span></td>
+                      <td><span class="p-badge p-low">Low</span></td>
+                      <td><span class="st-badge st-pending">Pending</span></td>
+                      <td>18 Aug</td>
+                      <td><span class="prog-txt">30%</span></td>
+                      <td><button class="btn-tbl-act">✏️</button></td>
+                    </tr>
+                    <tr class="t-row">
+                      <td><input type="checkbox" class="tbl-chk"></td>
+                      <td><strong>Optimize Electron Cold Start Speed</strong></td>
+                      <td><span class="cat-pill backend">Performance</span></td>
+                      <td><span class="p-badge p-high">High</span></td>
+                      <td><span class="st-badge st-prog">In Progress</span></td>
+                      <td>20 Aug</td>
+                      <td><span class="prog-txt">60%</span></td>
+                      <td><button class="btn-tbl-act">✏️</button></td>
+                    </tr>
+                    <tr class="t-row">
+                      <td><input type="checkbox" class="tbl-chk"></td>
+                      <td><strong>Configure Windows NSIS Installer</strong></td>
+                      <td><span class="cat-pill sec">DevOps</span></td>
+                      <td><span class="p-badge p-med">Medium</span></td>
+                      <td><span class="st-badge st-pending">Pending</span></td>
+                      <td>22 Aug</td>
+                      <td><span class="prog-txt">10%</span></td>
+                      <td><button class="btn-tbl-act">✏️</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- 3. Calendar View -->
+            <div class="app-view-tab" id="view-calendar">
+              <div class="view-header-row">
+                <div>
+                  <h3>August 2026</h3>
+                  <p>Visual month grid with event emoji task markers.</p>
+                </div>
+                <div class="cal-nav-buttons">
+                  <button class="btn-cal-step">&lt;</button>
+                  <button class="btn-cal-today">Today</button>
+                  <button class="btn-cal-step">&gt;</button>
+                </div>
+              </div>
+
+              <div class="cal-grid-container">
+                <div class="cal-days-header"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+                <div class="cal-cells-grid">
+                  <div class="c-cell empty"></div><div class="c-cell empty"></div><div class="c-cell empty"></div><div class="c-cell empty"></div><div class="c-cell empty"></div><div class="c-cell event-cell">1 🎯 Sprint</div><div class="c-cell event-cell">2 ⚡</div>
+                  <div class="c-cell event-cell">3 🚀</div><div class="c-cell event-cell">4 🏆 Review</div><div class="c-cell event-cell">5 🔥</div><div class="c-cell event-cell">6 💎</div><div class="c-cell event-cell">7 🌟</div><div class="c-cell event-cell">8 💡 Ideas</div><div class="c-cell event-cell">9 ☀️</div>
+                  <div class="c-cell event-cell">10 🎨</div><div class="c-cell event-cell">11 📝 Arch</div><div class="c-cell event-cell">12 🍀 Done</div><div class="c-cell event-cell">13 🧠</div><div class="c-cell active-today">14 🟢 Today</div><div class="c-cell event-cell">15 🚀 Release</div><div class="c-cell event-cell">16 🛡️ Audit</div>
+                  <div class="c-cell">17</div><div class="c-cell event-cell">18 📝 Docs</div><div class="c-cell">19</div><div class="c-cell event-cell">20 ⚡ Perf</div><div class="c-cell">21</div><div class="c-cell event-cell">22 💎 NSIS</div><div class="c-cell">23</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Goals View -->
+            <div class="app-view-tab" id="view-goals">
+              <div class="view-header-row">
+                <div>
+                  <h3>Goals Overview</h3>
+                  <p>Track completion ring velocity and active goal milestones.</p>
+                </div>
+                <button class="btn btn-primary btn-sm" type="button">+ New Goal</button>
+              </div>
+
+              <div class="goals-overview-box">
+                <div class="g-chart-ring">
+                  <div class="g-ring-num">72%</div>
+                  <span>Goals Achieved</span>
+                </div>
+                <div class="g-metrics-row">
+                  <div class="g-m-card"><strong>8</strong><small>Total Goals</small></div>
+                  <div class="g-m-card green-txt"><strong>5</strong><small>Completed</small></div>
+                  <div class="g-m-card blue-txt"><strong>3</strong><small>Active</small></div>
+                  <div class="g-m-card red-txt"><strong>0</strong><small>Overdue</small></div>
+                </div>
+              </div>
+
+              <!-- Goals List Preview -->
+              <div class="goals-list-grid">
+                <div class="g-item-card">
+                  <div class="g-item-header">
+                    <strong>🚀 Launch TaskFlow v1.0 Personal</strong>
+                    <span class="badge-pill green-pill">Short Term</span>
+                  </div>
+                  <small>Target: 15 Aug 2026 • Target Velocity: 85%</small>
+                  <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+                </div>
+
+                <div class="g-item-card">
+                  <div class="g-item-header">
+                    <strong>⚡ Sub-200ms Cold Start Speed</strong>
+                    <span class="badge-pill green-pill">Performance</span>
+                  </div>
+                  <small>Target: 20 Aug 2026 • Target Velocity: 90%</small>
+                  <div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
+                </div>
+
+                <div class="g-item-card">
+                  <div class="g-item-header">
+                    <strong>🛡️ Zero Cloud Data Leak Audit</strong>
+                    <span class="badge-pill amber-pill">Security</span>
+                  </div>
+                  <small>Status: Verified Completed • AES-256 Checksum Passed</small>
+                  <div class="progress-track"><div class="progress-fill" style="width: 100%;"></div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. My Day View -->
+            <div class="app-view-tab" id="view-myday">
+              <div class="view-header-row">
+                <div>
+                  <h3>My Day • Friday, August 14, 2026</h3>
+                  <p>Daily focus dashboard and reflections journal.</p>
+                </div>
+                <button class="btn btn-outline btn-sm" type="button">📥 Export Report</button>
+              </div>
+
+              <div class="myday-metrics-strip">
+                <div class="myday-pill"><span>⏱️ Time Tracked:</span> <strong>6.5 hrs</strong></div>
+                <div class="myday-pill green-pill"><span>✓ Completed:</span> <strong>5</strong></div>
+                <div class="myday-pill blue-pill"><span>🕒 Scheduled:</span> <strong>3</strong></div>
+                <div class="myday-pill amber-pill"><span>⏳ Pending:</span> <strong>2</strong></div>
+              </div>
+
+              <div class="myday-journal-box">
+                <h4>✍️ Daily Journal Note</h4>
+                <div class="journal-prompts">
+                  <button class="btn-prompt">+ Win</button>
+                  <button class="btn-prompt">+ Insight</button>
+                  <button class="btn-prompt">+ Next Steps</button>
+                </div>
+                <textarea class="journal-textarea">Today focused on completing the TaskFlow landing page overhaul, testing the local SQLite query index, and verifying offline encryption. Next steps: finalize NSIS setup build for Windows 10/11.</textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 7. ROADMAP (Premium Glass Cards: Coming Soon Only) ===== -->
+  <section class="section roadmap-section" id="roadmap">
+    <div class="wrap">
+      <div class="section-header center reveal">
+        <span class="glass-pill">PRODUCT ROADMAP</span>
+        <h2 class="section-title">What's Next for TaskFlow</h2>
+        <p class="section-subtitle">Version 1.0 (Personal Edition) is active today. Team &amp; Organization features are in active development.</p>
+      </div>
+
+      <div class="roadmap-cards-grid">
+        <!-- Card One: Team Workspace -->
+        <article class="glass-roadmap-card green-theme-card reveal" style="--d:0">
+          <div class="roadmap-badge-pill green-pill">PLANNED FOR FUTURE RELEASE</div>
+          <div class="r-icon-header">
+            <span class="r-icon green-glow">👥</span>
+            <h3>Team Workspace</h3>
+            <span class="r-pill-tag green-tag">COMING SOON</span>
+          </div>
+          <p>Collaborate with your team using shared workspaces, task assignments, comments, and real-time collaboration.</p>
+          <ul class="roadmap-bullets">
+            <li><span class="chk">✓</span> Shared Projects &amp; Dashboards</li>
+            <li><span class="chk">✓</span> Task Assignment &amp; Due Dates</li>
+            <li><span class="chk">✓</span> Real-Time P2P Network Sync</li>
+            <li><span class="chk">✓</span> Team Activity Feeds &amp; Comments</li>
+          </ul>
+        </article>
+
+        <!-- Card Two: Organization Edition -->
+        <article class="glass-roadmap-card green-theme-card reveal" style="--d:1">
+          <div class="roadmap-badge-pill green-pill">PLANNED FOR FUTURE RELEASE</div>
+          <div class="r-icon-header">
+            <span class="r-icon green-glow">🏢</span>
+            <h3>Organization Edition</h3>
+            <span class="r-pill-tag green-tag">COMING SOON</span>
+          </div>
+          <p>Built for businesses with department structures, role-based permissions, organization management, and compliance controls.</p>
+          <ul class="roadmap-bullets">
+            <li><span class="chk">✓</span> Department &amp; Member Management</li>
+            <li><span class="chk">✓</span> Role-Based Access Control (RBAC)</li>
+            <li><span class="chk">✓</span> Centralized Admin Dashboard</li>
+            <li><span class="chk">✓</span> Security &amp; Compliance Audit Logs</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 8. DOWNLOAD SECTION (Dark Emerald Gradient) ===== -->
+  <section class="section dark-download-section" id="download">
+    <div class="wrap">
+      <div class="dark-download-box reveal">
+        <div class="dark-download-left">
+          <div class="dark-eyebrow">
+            <span class="eyebrow-logo-box">
+              <img src="assets/logo-mark.png" alt="TaskFlow Emblem" width="20" height="20">
+            </span>
+            <span>TASKFLOW PERSONAL EDITION v1.0</span>
+          </div>
+
+          <h2>Download TaskFlow<br><span class="accent-emerald">100% Free Forever</span></h2>
+          <p class="dark-subtext">No Account Required • Works Offline • 100% Free</p>
+
+          <div class="download-meta-pills">
+            <span class="meta-pill">⚡ Sub-Second Speed (&lt; 200ms)</span>
+            <span class="meta-pill">🔒 100% Local AES-256 Privacy</span>
+            <span class="meta-pill">🛡️ Clean &amp; Verified Setup</span>
+            <span class="meta-pill">💻 Windows 10 &amp; 11 Ready</span>
+          </div>
+        </div>
+
+        <div class="dark-download-right">
+          <!-- Logo Emblem with Theme Adaptation -->
+          <div class="logo-wrapper theme-adjusted-logo dark-theme-logo">
+            <img src="assets/logo-mark.png" alt="TaskFlow Logo" width="100" height="100">
+          </div>
+
+          <a href="assets/TaskFlow Setup 1.0.0.exe" download="TaskFlow Setup 1.0.0.exe" class="btn btn-emerald-primary btn-xl btn-pulse" id="mainDownloadBtn">
+            <svg class="dl-btn-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Download Free for Windows</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 9. FAQ ACCORDION (Pro 2-Column Split Layout) ===== -->
+  <section class="section faq-section" id="faq">
+    <div class="wrap">
+      <div class="section-header center reveal">
+        <span class="glass-pill">FREQUENTLY ASKED QUESTIONS</span>
+        <h2 class="section-title">Everything You Need to Know</h2>
+        <p class="section-subtitle">Clear answers to common questions about TaskFlow, privacy, licensing, and offline storage.</p>
+      </div>
+
+      <div class="faq-search-wrapper reveal">
+        <span class="faq-search-icon">🔍</span>
+        <input type="text" id="faqSearchInput" class="faq-search-input" placeholder="Search FAQ keywords (e.g. pricing, offline, encryption, windows)..." aria-label="Search FAQ questions">
+      </div>
+
+      <div class="faq-split-grid reveal">
+        <!-- Left Side: Sticky Direct Support Card -->
+        <aside class="faq-support-sidebar">
+          <div class="faq-support-card">
+            <div class="support-icon-badge">💬</div>
+            <h3>Have more questions?</h3>
+            <p>Can't find the answer you're looking for? Reach out to our engineering team at Fenora Infotech directly.</p>
+            <a href="mailto:fenorainfotech@gmail.com" class="btn btn-emerald-primary btn-sm btn-full">
+              <span>📩 Contact Support</span>
+            </a>
+            <div class="support-meta-tag">
+              <span class="pulse-dot-sm"></span>
+              <span>Response time: &lt; 24 hours</span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Right Side: Accordion Cards -->
+        <div class="faq-accordion-list">
+          <div class="faq-item glass-faq-card">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <div class="faq-q-text">
+                <span class="faq-q-tag green-tag">💰 Pricing</span>
+                <strong>Is TaskFlow really 100% free forever?</strong>
+              </div>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. TaskFlow Personal Edition (v1.0) is 100% free forever to download and use. There are no hidden subscription fees, locked features, or trial expirations.</p>
+            </div>
+          </div>
+
+          <div class="faq-item glass-faq-card">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <div class="faq-q-text">
+                <span class="faq-q-tag green-tag">💻 Offline</span>
+                <strong>Does TaskFlow require an internet connection?</strong>
+              </div>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>No. TaskFlow is built from the ground up as an offline-first desktop application. You can create, edit, organize, and manage your workspace with zero active internet connection.</p>
+            </div>
+          </div>
+
+          <div class="faq-item glass-faq-card">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <div class="faq-q-text">
+                <span class="faq-q-tag green-tag">🔑 Account</span>
+                <strong>Do I need to sign up or create an online account?</strong>
+              </div>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>No account is required. Simply download the Windows installer, launch the app, and start organizing your tasks immediately without sharing your email or personal details.</p>
+            </div>
+          </div>
+
+          <div class="faq-item glass-faq-card">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <div class="faq-q-text">
+                <span class="faq-q-tag green-tag">🛡️ Privacy</span>
+                <strong>Where is my data stored? Is it safe on my PC?</strong>
+              </div>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>All your data is stored locally in an embedded SQLite database on your computer (`%APPDATA%/taskflow-ai.db`) protected by AES-256 local checksums. Your notes and tasks never get uploaded to third-party cloud servers.</p>
+            </div>
+          </div>
+
+          <div class="faq-item glass-faq-card">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <div class="faq-q-text">
+                <span class="faq-q-tag purple-tag">👥 Roadmap</span>
+                <strong>Are Team Workspace and Organization Edition available?</strong>
+              </div>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Not yet. Team Workspace and Organization Edition are planned for upcoming releases on our product roadmap. Version 1.0 focuses 100% on giving individuals the ultimate offline personal productivity workspace.</p>
+            </div>
+          </div>
+
+          <div class="faq-item glass-faq-card">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <div class="faq-q-text">
+                <span class="faq-q-tag blue-tag">🖥️ OS Support</span>
+                <strong>Will macOS and Linux versions be supported?</strong>
+              </div>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. While Version 1.0 is compiled for Windows 10 &amp; 11 (64-bit), cross-platform desktop builds for macOS and Linux are in active development.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 10. FINAL CTA SHOWCASE BANNER ===== -->
+  <section class="section final-cta-section">
+    <div class="wrap">
+      <div class="final-cta-box glass-cta-banner reveal">
+        <!-- Logo Emblem Badge -->
+        <div class="cta-logo-header">
+          <div class="logo-wrapper theme-adjusted-logo">
+            <img src="assets/logo-mark.png" alt="TaskFlow Emblem" width="64" height="64">
+          </div>
+          <span class="glass-pill green-pill-tag">⚡ TASKFLOW PERSONAL EDITION v1.0</span>
+        </div>
+
+        <h2 class="cta-banner-title">Ready to Experience the Ultimate Offline Flow?</h2>
+        <p class="cta-banner-subtitle">Download TaskFlow today and take full control of your daily tasks, notes, calendar, and goals with 100% local privacy and zero cloud subscriptions.</p>
+        
+        <div class="final-cta-actions">
+          <a href="assets/TaskFlow Setup 1.0.0.exe" download="TaskFlow Setup 1.0.0.exe" class="btn btn-emerald-primary btn-xl btn-pulse btn-magnetic">
+            <svg class="dl-btn-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Download Free for Windows</span>
+          </a>
+          <button class="btn btn-glass btn-xl demo-trigger-btn" type="button" onclick="document.getElementById('demo').scrollIntoView({behavior: 'smooth'})">
+            <span>▶ Watch Interactive Demo</span>
+          </button>
+        </div>
+        
+        <div class="cta-trust-specs-bar">
+          <div class="c-spec-item">
+            <span class="spec-icon">🔒</span>
+            <span>100% Local AES-256</span>
+          </div>
+          <span class="spec-divider">•</span>
+          <div class="c-spec-item">
+            <span class="spec-icon">💻</span>
+            <span>Windows 10 / 11 (64-bit)</span>
+          </div>
+          <span class="spec-divider">•</span>
+          <div class="c-spec-item">
+            <span class="spec-icon">⚡</span>
+            <span>Zero Sign-up Required</span>
+          </div>
+          <span class="spec-divider">•</span>
+          <div class="c-spec-item">
+            <span class="spec-icon">🇮🇳</span>
+            <span>Made in India</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== LIGHT GLASS FOOTER WITH COMPANY DETAILS ===== -->
+<footer class="dark-footer" id="about">
+  <div class="wrap footer-content-grid">
+    <div class="footer-brand-col">
+      <a href="#top" class="brand">
+        <div class="logo-wrapper">
+          <img src="assets/logo-mark.png" alt="TaskFlow Logo" class="brand-logo-img" width="48" height="48">
+        </div>
+        <span class="brand-text"><strong>TaskFlow</strong><small>v1.0 PERSONAL</small></span>
+      </a>
+      <p>Local First • Privacy First • Offline First.</p>
+      
+      <a href="https://fenorainfotech-tawny.vercel.app/" target="_blank" rel="noopener noreferrer" class="company-detail-pill" title="Visit Fenora Infotech Official Website">
+        <span class="c-icon">🏢</span>
+        <div>
+          <strong>Fenora Infotech</strong>
+          <small>Independent Software Studio ↗</small>
+        </div>
+      </a>
+
+      <div class="social-glass-row">
+        <a href="https://www.instagram.com/fenora_infotech" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-insta">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <a href="https://www.threads.net/@fenora_infotech" target="_blank" rel="noopener noreferrer" aria-label="Threads" class="social-threads">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.75c-5.38 0-9.75-4.37-9.75-9.75S6.62 2.25 12 2.25s9.75 4.37 9.75 9.75c0 2.92-1.32 5.56-3.41 7.34a.75.75 0 0 1-.98-1.14 8.24 8.24 0 0 0 2.89-6.2c0-4.55-3.7-8.25-8.25-8.25S3.75 7.45 3.75 12 7.45 20.25 12 20.25c2.32 0 4.41-.95 5.92-2.48a.75.75 0 1 1 1.06 1.06A9.71 9.71 0 0 1 12 21.75zm3.48-9.42c-.22-.38-.52-.7-.88-.93a4.27 4.27 0 0 0-2.35-.6c-2.36 0-4.25 1.89-4.25 4.25 0 2.36 1.89 4.25 4.25 4.25 1.25 0 2.38-.54 3.16-1.41a.75.75 0 0 1 1.12 1c-1.07 1.2-2.61 1.91-4.28 1.91-3.18 0-5.75-2.57-5.75-5.75s2.57-5.75 5.75-5.75c1.19 0 2.32.37 3.26 1.05a5.73 5.73 0 0 1 1.97 3.32h.02c.4 1.83-.02 3.65-1.12 4.88-.78.87-1.89 1.35-3.05 1.35-1.6 0-2.75-.85-2.75-2.31 0-1.74 1.38-2.88 3.31-2.88.58 0 1.13.1 1.63.29-.02-.85-.43-1.61-1.15-2.02zm-1.07 3.27c-.36-.14-.77-.21-1.19-.21-1.1 0-1.81.61-1.81 1.45 0 .74.55 1.12 1.32 1.12.78 0 1.49-.39 1.68-1.01v-1.35z"/></svg>
+        </a>
+        <a href="https://x.com/fenora_infotech" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="social-x">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@fenorainfotech" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-yt">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2.5" y="5.5" width="19" height="13" rx="4" stroke="currentColor" stroke-width="1.8"/><path d="M10.5 9.5l5 2.5-5 2.5v-5z" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/fenora-infotech/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-li">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <nav class="footer-nav-col" aria-label="Product">
+      <h4>Product</h4>
+      <a href="#features">Features</a>
+      <a href="#showcase">Showcase</a>
+      <a href="#download">Download</a>
+      <a href="#roadmap">Roadmap</a>
+    </nav>
+
+    <nav class="footer-nav-col" aria-label="Resources">
+      <h4>Resources</h4>
+      <a href="mailto:fenorainfotech@gmail.com">Documentation</a>
+      <a href="#faq">Help &amp; FAQ</a>
+      <a href="#roadmap">Release Notes</a>
+    </nav>
+
+    <nav class="footer-nav-col" aria-label="Company Details">
+      <h4>Company Info</h4>
+      <a href="https://fenorainfotech-tawny.vercel.app/#about" target="_blank" rel="noopener noreferrer">About Fenora Infotech</a>
+      <a href="mailto:fenorainfotech@gmail.com">📩 fenorainfotech@gmail.com</a>
+      <a href="https://fenorainfotech-tawny.vercel.app/#contact" target="_blank" rel="noopener noreferrer">Contact Support</a>
+      <a href="https://fenorainfotech-tawny.vercel.app/" target="_blank" rel="noopener noreferrer">Official Website</a>
+    </nav>
+  </div>
+
+  <div class="wrap dark-footer-bottom">
+    <p>TaskFlow Personal Edition v1.0 • Built by <strong>Fenora Infotech</strong> • Made with <span class="heart-pulse">❤️</span> in India</p>
+    <p>&copy; 2026 Fenora Infotech. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- ===== FEATURE DETAIL MODAL ===== -->
+<div class="modal-backdrop" id="featureModalBackdrop" hidden>
+  <div class="modal modal-lg" role="dialog" aria-modal="true" aria-labelledby="featureModalTitle">
+    <button class="modal-close" id="featureModalClose" aria-label="Close detail">&times;</button>
+    <div class="modal-header-brand">
+      <div class="logo-wrapper">
+        <img src="assets/logo-mark.png" alt="TaskFlow Logo" width="36" height="36">
+      </div>
+      <h3 id="featureModalTitle">Feature Details</h3>
+    </div>
+    <div id="featureModalBody" class="feature-modal-body"></div>
+  </div>
+</div>
+
+<!-- ===== VIDEO DEMO LIGHTBOX MODAL ===== -->
+<div class="modal-backdrop" id="videoModalBackdrop" hidden>
+  <div class="modal modal-video" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
+    <button class="modal-close" id="videoModalClose" aria-label="Close video demo">&times;</button>
+    <div class="modal-header-brand">
+      <div class="logo-wrapper">
+        <img src="assets/logo-mark.png" alt="TaskFlow Logo" width="36" height="36">
+      </div>
+      <h3 id="videoModalTitle">TaskFlow Desktop — Official Video Walkthrough</h3>
+    </div>
+    <div class="video-modal-body">
+      <video id="modalVideoPlayer" src="assets/TaskFlow.mp4" controls playsinline poster="assets/hero-illustration.svg"></video>
+    </div>
+  </div>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
